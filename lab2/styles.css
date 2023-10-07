@@ -1,0 +1,193 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fffbfa;
+    margin-right: -20px;
+    height: 90px;
+}
+
+body {
+    background-color: #fffbfa;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: "Fall";
+    src: url("usedFiles/fall/FallIsComingRegular-Mx9B.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BalooBhaijaan";
+    src: url("usedFiles/BalooBhaijaan-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MontserratAlternates";
+    src: url("usedFiles/Montserrat_Alternates/MontserratAlternates-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MontserratAlternates_Medium";
+    src: url("usedFiles/Montserrat_Alternates/MontserratAlternates-Medium.ttf") format("truetype");
+}
+
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    height: 90px;
+}
+
+.navigation-menu-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation-menu__button {
+    background-color: #146e5f;
+    color: #ffffff;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    border-bottom-right-radius: 10px;
+    transform: scale(0.7);
+    margin-left: -50px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    font-size: 30px;
+
+}
+
+.navigation-menu__button:hover {
+    background-color: #E07600;
+    transform: scale(0.75);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    color: #534439;
+}
+
+.fullscreen-image {
+    position: relative;
+    text-align: center;
+    background-image: url('usedFiles/lucas-favre-eMNRPvvNcxM-unsplash.jpg');
+    background-repeat: no-repeat;
+    height: calc(100vh - 90px);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 17px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fullscreen-image {
+    text-align: center;
+    color: #fff;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 17px;
+}
+
+.welcome-section {
+    padding: 40px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text {
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 30px;
+    color: #534439;
+}
+
+.large-card {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.card-content img {
+    height: auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.text-content {
+    padding: 0 20px;
+    color: #534439;
+}
+
+.text-content h3 {
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 24px;
+}
+
+.text-content p {
+    font-size: 16px;
+}
+
+
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 30px;
+    color: #534439;
+}
+
+.small-card {
+    display: inline-block;
+    width: calc(20.5%);
+    margin: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.small-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.small-card p {
+    margin: 10px 0;
+    font-family: "MontserratAlternates_Medium", sans-serif;
+    font-size: 23px;
+    color: #534439;
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: #534439;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: "MontserratAlternates_Medium", sans-serif;
+}
+
