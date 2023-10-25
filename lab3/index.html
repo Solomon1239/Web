@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CampField</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="usedFiles/CAMPFIELDlogo.svg" alt="CAMPFIELD">
+    </div>
+    <div class="navigation-menu-container">
+        <a href="дома.html" class="navigation-menu__link">О домах</a>
+        <a href="как-добраться.html" class="navigation-menu__link">Как добраться</a>
+        <a href="правила.html" class="navigation-menu__link">Правила</a>
+        <a href="бронирование.html" class="navigation-menu__link">Бронирование</a>
+    </div>
+    <div class="sandwich-button">&#9776;</div>
+    <div class="sandwich-menu">
+        <a href="дома.html" class="sandwich-menu__link">О домах</a>
+        <a href="как-добраться.html" class="sandwich-menu__link">Как добраться</a>
+        <a href="правила.html" class="sandwich-menu__link">Правила</a>
+        <a href="бронирование.html" class="sandwich-menu__link">Бронирование</a>
+    </div>
+</header>
+
+<main>
+
+    <section class="fullscreen-image">
+        <div class="image-overlay">
+            <h1>Глэмпинг начинается здесь</h1>
+        </div>
+    </section>
+
+    <section class="welcome-section">
+        <div class="welcome-text">
+            <h2>Добро пожаловать в CampField</h2>
+        </div>
+
+        <div class="large-card">
+            <div class="card-content">
+                <img src="usedFiles/karsten-winegeart-sStahKEhT9w-unsplash.jpg" alt="Melanchola">
+                <div class="text-content">
+                    <h3>Melanchola</h3>
+                    <p>Отдых в нашем Треугольном Доме — это непередаваемое погружение в гармонию с природой.<br><br>
+                        Огромное панорамное окно занимает всю стену и позволяет вам полностью погрузиться в окружающий пейзаж,<br>
+                        создавая визуальное взаимодействие с природой.
+                    </p>
+                    <a href="#" class="read-more-link">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="large-card">
+            <div class="card-content">
+                <img src="usedFiles/a-6541.jpg" alt="Tropicana">
+                <div class="text-content">
+                    <h3>Tropicana</h3>
+                    <p>Купольный дом имеет великолепное панорамное окно на лес и звезды в ночное время,
+                        а в течение дня вы будете окружены красотой природы из всех сторон.<br>
+                        Так же внутри есть тёмные занавеси, которые вы можете опустить, когда пожелаете уединиться.<br><br>
+                        Этот дом в форме Сферы - идеальное место для тех,
+                        кто ищет гармонию с природой в уникальной архитектурной оболочке.
+                    </p>
+                    <a href="#" class="read-more-link">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="large-card">
+            <div class="card-content">
+                <img src="usedFiles/MOD_5916.jpg" alt="Lazaretto">
+                <div class="text-content">
+                    <h3>Lazaretto</h3>
+                    <p>Выбирая отдых в Зеркально-панорамном доме,
+                        вы получаете полное слияние с природой и визуальное "отсутствие границ".<br>
+                        Невероятное ощущение!<br><br>
+                        Зеркальное покрытие позволяет видеть всё вокруг,
+                        при этом снаружи вы остаётесь полностью невидимы для других.<br>
+                        Однако у панорамных домов есть особенность - при наступлении вечера при выключенном свете помещение внутри становится заметным снаружи.<br>
+                        Мы позаботились об этом нюансе: помимо встроенных жалюзи,
+                        Зеркальные дома дополнены шторами black out для вашего комфорта и спокойного сна.
+                    </p>
+                    <a href="#" class="read-more-link">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Наши дополнительные услуги</h2>
+        <div class="small-card">
+            <img src="usedFiles/a-2066.jpg" alt="Услуга 1">
+            <p>Настольный теннис</p>
+        </div>
+
+        <div class="small-card">
+            <img src="usedFiles/a-2067.jpg" alt="Услуга 2">
+            <p>Аренда сапбордов</p>
+        </div>
+
+        <div class="small-card">
+            <img src="usedFiles/a-2086.jpg" alt="Услуга 3">
+            <p>Баня на берегу</p>
+        </div>
+
+        <div class="small-card">
+            <img src="usedFiles/a-2366.jpg" alt="Услуга 4">
+            <p>Аренда лодок</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="left">
+        <p>С любовью, ваш CampField!<br>Наши контакты:<br>+7 (9XX) XXX-XX-XX<br>ООО«CampField»</p>
+    </div>
+    <div class="right">
+        <p>Присоединяйтесь!<br>ВКонтакте<br>Telegram</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sandwichButton = document.querySelector('.sandwich-button');
+        const sandwichMenu = document.querySelector('.sandwich-menu');
+
+        sandwichButton.addEventListener('click', function() {
+            sandwichMenu.classList.toggle('active');
+        });
+    });
+</script>
+</body>
+</html>

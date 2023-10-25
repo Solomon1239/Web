@@ -1,0 +1,316 @@
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #fffbfa;
+    height: 90px;
+}
+
+body {
+    background-color: #fffbfa;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: "Fall";
+    src: url("usedFiles/fall/FallIsComingRegular-Mx9B.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BalooBhaijaan";
+    src: url("usedFiles/BalooBhaijaan-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MontserratAlternates";
+    src: url("usedFiles/Montserrat_Alternates/MontserratAlternates-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MontserratAlternates_Medium";
+    src: url("usedFiles/Montserrat_Alternates/MontserratAlternates-Medium.ttf") format("truetype");
+}
+
+
+.logo {
+    margin-left: 15px;
+    flex: 1;
+}
+
+.navigation-menu-container {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.navigation-menu__link {
+    margin-left: -30px;
+    margin-right: -35px;
+    background-color: #146e5f;
+    color: #ffffff;
+    padding: 25px 45px;
+    border-radius: 100px;
+    border-bottom-right-radius: 10px;
+    transform: scale(0.7);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation-menu__link:hover {
+    background-color: #E07600;
+    transform: scale(0.75);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    color: #534439;
+}
+
+
+.fullscreen-image {
+    position: relative;
+    text-align: center;
+    background-image: url('usedFiles/lucas-favre-eMNRPvvNcxM-unsplash.jpg');
+    background-repeat: no-repeat;
+    height: calc(100vh - 90px);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 17px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.fullscreen-image {
+    text-align: center;
+    color: #fff;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 17px;
+}
+
+.welcome-section {
+    padding: 40px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text {
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 30px;
+    color: #534439;
+}
+
+.large-card {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.card-content img {
+    display: flex;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.text-content {
+    padding: 0 20px;
+    color: #534439;
+}
+
+.text-content h3 {
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 24px;
+}
+
+.text-content p {
+    font-size: 16px;
+}
+
+
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 30px;
+    color: #534439;
+}
+
+.small-card {
+    display: inline-block;
+    width: calc(20.5%);
+    margin: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.small-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.small-card p {
+    margin: 10px 0;
+    font-family: "MontserratAlternates_Medium", sans-serif;
+    font-size: 23px;
+    color: #534439;
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: #534439;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: "MontserratAlternates_Medium", sans-serif;
+}
+
+.sandwich-button {
+    margin-right: 15px;
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    background-color: #146e5f;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 100px;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.sandwich-button:hover {
+    background-color: #E07600;
+    transform: scale(1.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    color: #534439;
+}
+
+
+.sandwich-menu {
+    display: none;
+    padding: 20px;
+    background-color: #fffbfa;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.sandwich-menu.active {
+    display: block;
+}
+
+.sandwich-menu__link {
+    display: block;
+    margin-left: auto;
+    background-color: #146e5f;
+    color: #ffffff;
+    padding: 25px 45px;
+    border-radius: 100px;
+    border-bottom-right-radius: 10px;
+    transform: scale(0.7);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sandwich-menu__link:hover {
+    background-color: #E07600;
+    transform: scale(0.75);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    color: #534439;
+}
+
+
+.sandwich-button.active + .sandwich-menu {
+    display: block;
+}
+
+.card-content .read-more-link {
+    display: none;
+}
+
+@media (max-width: 1370px) {
+
+    .navigation-menu-container {
+        display: none;
+    }
+
+    .sandwich-button {
+        display: flex;
+    }
+
+    .large-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-content {
+        flex-direction: column;
+    }
+
+    .card-content img {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .text-content {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .text-content h3 {
+        margin: 0;
+    }
+
+    .text-content p {
+        display: none;
+    }
+
+    .card-content .read-more-link {
+        display: block;
+        background-color: #146e5f;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 100px;
+        margin-top: 20px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    }
+
+    .card-content .read-more-link:hover {
+        background-color: #E07600;
+        transform: scale(1.1);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        color: #534439;
+    }
+}
+
