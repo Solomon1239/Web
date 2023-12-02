@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "MontserratAlternates";
+    src: url("usedFiles/Montserrat_Alternates/MontserratAlternates-Bold.ttf") format("truetype");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #272838;
+}
+
+header {
+    background-color: #272838;
+    padding: 15px;
+    text-align: center;
+    font-family: "MontserratAlternates", sans-serif;
+    font-size: 40px;
+    color: #FFA630;
+}
+
+#app {
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    padding: 30px;
+}
+
+input::placeholder {
+    font-size: 30px;
+}
+
+input {
+    flex: 1;
+    padding: 30px;
+    font-size: 30px;
+}
+input:focus {
+    font-size: 30px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: #E6E8E6;
+    border: none;
+}
+
+button.delete {
+    background-color: #FF5B22;
+}
+
+#taskContainer {
+    border: 1px solid #272838;
+    padding: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 40px;
+    color: white;
+}
+
+.task .circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #858585;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.task div {
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+#taskFilters {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#taskFilters button {
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #3b3b3b;
+    background-color: #E6E8E6;
+    border: none;
+}
+
+#taskContainer {
+    margin-top: 50px;
+}

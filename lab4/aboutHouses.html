@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CampField</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="commonHead.js"></script>
+    <style>
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo-link">
+        <div class="logo">
+            <img src="usedFiles/CAMPFIELDlogo.svg" alt="CAMPFIELD">
+        </div>
+    </a>
+    <div class="navigation-menu-container">
+        <a href="aboutHouses.html" class="navigation-menu__link">О домах</a>
+        <a href="howToGet.html" class="navigation-menu__link">Как добраться</a>
+        <a href="rules.html" class="navigation-menu__link">Правила</a>
+        <a href="reservation.html" class="navigation-menu__link">Бронирование</a>
+    </div>
+    <div class="sandwich-button">&#9776;</div>
+    <div class="sandwich-menu">
+        <a href="aboutHouses.html" class="sandwich-menu__link">О домах</a>
+        <a href="howToGet.html" class="sandwich-menu__link">Как добраться</a>
+        <a href="rules.html" class="sandwich-menu__link">Правила</a>
+        <a href="reservation.html" class="sandwich-menu__link">Бронирование</a>
+    </div>
+</header>
+
+<main>
+
+    <div class="large-card">
+        <div class="gallery">
+            <button class="arrow left" onclick="changeImage('gallery1', -1)">&lt;</button>
+            <img src="usedFiles/image/gallery1/image1.jpg" alt="Melanchola" id="gallery1">
+            <button class="arrow right" onclick="changeImage('gallery1', 1)">&gt;</button>
+            <div class="text-content">
+                <h3>Melanchola</h3>
+                <p>Отдых в нашем Треугольном Доме — это непередаваемое погружение в гармонию с природой.
+                    Огромное панорамное окно занимает всю стену и позволяет вам полностью погрузиться в окружающий пейзаж,<br>
+                    создавая визуальное взаимодействие с природой.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="large-card">
+        <div class="gallery">
+            <button class="arrow left" onclick="changeImage('gallery2', -1)">&lt;</button>
+            <img src="usedFiles/image/gallery2/image1.jpg" alt="Tropicana" id="gallery2">
+            <button class="arrow right" onclick="changeImage('gallery2', 1)">&gt;</button>
+            <div class="text-content">
+                <h3>Tropicana</h3>
+                <p>Купольный дом имеет великолепное панорамное окно на лес и звезды в ночное время,
+                    а в течение дня вы будете окружены красотой природы из всех сторон.<br>
+                    Так же внутри есть тёмные занавеси, которые вы можете опустить, когда пожелаете уединиться.<br><br>
+                    Этот дом в форме Сферы - идеальное место для тех,
+                    кто ищет гармонию с природой в уникальной архитектурной оболочке.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="large-card">
+        <div class="gallery">
+            <button class="arrow left" onclick="changeImage('gallery3', -1)">&lt;</button>
+            <img src="usedFiles/image/gallery3/image1.jpg" alt="Lazaretto" id="gallery3">
+            <button class="arrow right" onclick="changeImage('gallery3', 1)">&gt;</button>
+            <div class="text-content">
+                <h3>Lazaretto</h3>
+                <p>Выбирая отдых в Зеркально-панорамном доме,
+                    вы получаете полное слияние с природой и визуальное "отсутствие границ".<br>
+                    Невероятное ощущение!<br><br>
+                    Зеркальное покрытие позволяет видеть всё вокруг,
+                    при этом снаружи вы остаётесь полностью невидимы для других.<br>
+                    Однако у панорамных домов есть особенность - при наступлении вечера при выключенном свете помещение внутри становится заметным снаружи.<br>
+                    Мы позаботились об этом нюансе: помимо встроенных жалюзи,
+                    Зеркальные дома дополнены шторами black out для вашего комфорта и спокойного сна.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="left">
+        <p>С любовью, ваш CampField!<br>Наши контакты:<br>+7 (9XX) XXX-XX-XX<br>ООО«CampField»</p>
+    </div>
+    <div class="right">
+        <p>Присоединяйтесь!<br>ВКонтакте<br>Telegram</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sandwichButton = document.querySelector('.sandwich-button');
+        const sandwichMenu = document.querySelector('.sandwich-menu');
+
+        sandwichButton.addEventListener('click', function() {
+            sandwichMenu.classList.toggle('active');
+        });
+    });
+
+
+    const galleries = {
+        gallery1: { currentIndex: 1, totalImages: 1 },
+        gallery2: { currentIndex: 1, totalImages: 4 },
+        gallery3: { currentIndex: 1, totalImages: 5 },
+    };
+
+    function changeImage(galleryId, direction) {
+        const gallery = galleries[galleryId];
+        gallery.currentIndex += direction;
+
+        if (gallery.currentIndex > gallery.totalImages) {
+            gallery.currentIndex = 1;
+        } else if (gallery.currentIndex < 1) {
+            gallery.currentIndex = gallery.totalImages;
+        }
+
+        const image = document.getElementById(galleryId);
+        image.src = `usedFiles/image/${galleryId}/image${gallery.currentIndex}.jpg`;
+    }
+
+    (function () {
+        function calculateAndDisplayLoadTime() {
+
+            const loadStartTime = window.performance.timing.navigationStart;
+
+            const loadEndTime = new Date().getTime();
+
+            const loadTime = loadEndTime - loadStartTime;
+
+            const infoElement = document.createElement('p');
+            infoElement.textContent = `Страница загружена за ${loadTime} миллисекунд`;
+
+            const footer = document.querySelector('footer');
+            footer.appendChild(infoElement);
+        }
+
+        window.addEventListener('load', calculateAndDisplayLoadTime);
+    })();
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const currentURL = window.location.href;
+
+        const menuLinks = document.querySelectorAll('.navigation-menu__link');
+
+        menuLinks.forEach(function (link) {
+            if (currentURL.includes(link.href)) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

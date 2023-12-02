@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo List</title>
+    <script src="constructor.js"></script>
+</head>
+<body>
+<header>
+    <h1>ToDo List</h1>
+</header>
+
+<div id="app">
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Enter your task..." required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="taskFilters">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('active')">Active</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+
+    <div id="taskContainer"></div>
+</div>
+
+</body>
+</html>
